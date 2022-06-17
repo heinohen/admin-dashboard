@@ -5,13 +5,14 @@
 
 html,body {
     background-color: gray;
-    height: 100vh;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 
 }
 
 .container {
     display: grid;
     grid-template-columns: 1fr 5fr;
+    height: 100vh;
 }
 
 .container > div {
@@ -19,19 +20,36 @@ html,body {
 }
 
 .header {
-    background-color: aqua;
+    background-color: rgba(0, 0, 139, 0.342);
     grid-column: 2;
-    padding: 30px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    color: wheat;
 }
 
-.dash {
+.search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.header > div {
+    border: 1px solid gray;
+    height: 80px;
+}
+
+.dash { /*left side*/
     grid-row: 1 /3;
     background-color: green;
     display:flex;
     flex-direction: column;
-    align-items: center;
     justify-content: flex-start;
     gap: 70px;
+    padding-left: 30px;
+
 }
 
 .dash > .img_place {
@@ -40,6 +58,15 @@ html,body {
     background-color: yellow;
 
 }
+
+.links>li, .settings>li  {
+    margin-top:20px;
+    list-style: none;
+}
+
+
+
+/*middle window*/
 
 .bigwindow {
     background-color: lightpink;
@@ -54,7 +81,7 @@ html,body {
 }
 
 .cards {
-    background-color: gray;
+    background-color: lightgrey;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 30px;
@@ -64,12 +91,40 @@ html,body {
 
 .window {
     height: 200px;
-    border: 1px dashed green;
     overflow: hidden;
-    background-color: yellow;
+    background-color: white;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 4px;
+    padding: 5px;
+    
 }
 
-.sidebar {
+.window p {
+    margin: 3px;
+}
+
+.sidebar { /* right side*/
     background-color: blueviolet;
+    display: grid;
+    grid-template-rows: 1fr fr;
+}
+
+.sidebar > div {
+    border: 1px solid gold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer {
+    grid-column: 1 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    min-height: 40px;
+    max-height: 40px;
+    background-color: aqua;
 }
 
