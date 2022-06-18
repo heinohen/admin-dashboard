@@ -15,30 +15,33 @@ html,body {
     height: 100vh;
 }
 
-.container > div {
-    border: 1px solid black
-}
-
 .header {
-    background-color: rgba(0, 0, 139, 0.342);
+    background-color: white;
     grid-column: 2;
     display: grid;
     grid-template-rows: 1fr 1fr;
-    color: wheat;
+    box-shadow: 3px 3px  red;
+    margin-bottom: 10px;
 }
 
 .search {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
-
+.namebox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+}
 
 .header > div {
-    border: 1px solid gray;
-    height: 80px;
+        height: 80px;
 }
 
 .dash { /*left side*/
