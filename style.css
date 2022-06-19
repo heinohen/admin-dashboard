@@ -4,8 +4,9 @@
 }
 
 html,body {
-    background-color: white;
+    background-color: lightgray;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
 
 }
 
@@ -17,6 +18,10 @@ button {
     border-radius: 20px;
 }
 
+#searchlight {
+    padding-top: 2px;
+    width: 40px;
+}
 button:hover {
     background-color: rgb(32, 111, 107);
 
@@ -33,8 +38,9 @@ button:hover {
     grid-column: 2;
     display: grid;
     grid-template-rows: 1fr 1fr;
-    box-shadow: 3px 3px  red;
-    margin-bottom: 10px;
+    box-shadow: 0px 5px 5px 0px gray;
+    margin-bottom: 6px;
+    max-height: 200px;
 }
 
 .search {
@@ -46,11 +52,38 @@ button:hover {
     margin-right: 50px;
 }
 
+#searchbox {
+    width: 400px;
+    border-radius: 20px;
+    padding: 10px;
+    border: 1px solid lightblue;
+
+}
+
 .namebox {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 30px;
+    align-items: center;
+    gap: 20px;
+}
+
+.your_name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nameTag {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.leftContent {
+    margin-left: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
 }
 
 .header > div {
@@ -74,7 +107,7 @@ button:hover {
 }
 
 .dash { /*left side*/
-    grid-row: 1 /3;
+    grid-row: 1 /4;
     background-color: rgba(57, 57, 217, 0.726);
     display:flex;
     flex-direction: column;
@@ -82,47 +115,70 @@ button:hover {
     gap: 70px;
     padding-left: 30px;
     color: wheat;
+    min-width: 230px;
+    font-size: 15px;
 
 }
 
 .dash > .img_place {
     height: 40px;
-    width: 200px;
+    width: 100px;
     background-color: yellow;
     color: black;
+    margin-top: 30px;
     font-size: 20px;
-
+    font-family: Verdana, Geneva, Tahoma, sans-serif
 }
 
 .links>li, .settings>li  {
     margin-top:20px;
     list-style: none;
+    display: flex;
 }
+
+.links > li > a, .settings > li > a{
+    display: flex;
+    gap: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.links > li > a:hover, .settings > li > a:hover {
+    text-shadow: 0 0 3px white
+}
+
+
 
 
 
 /*middle window*/
 
 .bigwindow {
-    background-color: white;
+    background-color: lightgray;
     display: grid;
     grid-template-columns: 4fr 1fr;
-    background-image: url("./images/krystian-tambur-k7rZ8wTfABA-unsplash.jpg");
-    background-size: cover;
+  /*  background-image: url("./images/krystian-tambur-k7rZ8wTfABA-unsplash.jpg");
+    background-size: cover;*/
 
 
 }
 
 .card-container {
-    margin: 50px;
+    margin: 10px 10px 10px 10px;
 }
 
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 30px;
-    padding: 50px;
+    padding: 20px;
 
+}
+
+.social {
+    display: block;
+    text-align: right;
+    margin-top: 70px;
 }
 
 .window {
@@ -131,7 +187,11 @@ button:hover {
     background-color: white;
     box-shadow: 0px 5px 5px 0px gray;
     border-radius: 4px;
-    padding: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
     
 }
 
@@ -151,30 +211,45 @@ button:hover {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    box-shadow: 0px 5px 5px 0px gray;
+
 }
 
 
 .announcements > p {
     background-color: tan;
+    border-radius: 20px;
+    box-shadow: 0px 5px 5px 0px gray;
+    text-align: center;
+
+
 }
 
 .announcements > div {
+    
     background-color: aquamarine;
     flex: 1;
     padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 5px 0px gray;
+    max-height: 300px;
+
+
+
 }
 
 .trending {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    box-shadow: 0px 5px 5px 0px gray;
 
 }
 
 .trending > p {
+    text-align: center;
     background-color: tan;
+    border-radius: 20px;
+
+    box-shadow: 0px 5px 5px 0px gray;
 
 }
 
@@ -182,18 +257,21 @@ button:hover {
     background-color: aquamarine;
     flex: 1;
     padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 5px 0px gray;
+    max-height: 300px;
+
 }
 
 
 
 .footer {
-    grid-column: 1 / 3;
+    grid-column: 2 / 3;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(128, 128, 128, 0.499);
-    opacity: .4;
     gap: 10px;
+    background-color: lightgray;
 }
 
 .footer >a:hover {
